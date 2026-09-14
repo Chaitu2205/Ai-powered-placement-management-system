@@ -1,0 +1,26 @@
+# --- Web framework ---
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+
+# --- Settings / env ---
+pydantic==2.10.4
+pydantic-settings==2.7.1
+python-dotenv==1.0.1
+
+# --- Database ---
+sqlalchemy==2.0.36
+alembic==1.14.0
+pymysql==1.1.1
+cryptography==44.0.0        # required by PyMySQL for MySQL's sha256/caching_sha2 auth
+
+# --- Security (wired up in Phase 3, listed now so the env is ready) ---
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.20    # required for file uploads (resumes) in Phase 6
+
+# --- Resume text extraction (used starting Phase 6) ---
+pymupdf==1.25.1
+python-docx==1.1.2
+
+# --- AI provider (used starting Phase 7) ---
+anthropic==0.40.0
